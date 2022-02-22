@@ -1,0 +1,577 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+/* header */
+
+#header{
+display:flex;
+justify-content: space-between; /* các mục dc phân bổ đồng đều  */
+padding: 20px 50px;
+height:70px;
+align-items: center; /* chữ menu nằm chính giữa */
+background-color: rgba(255,255,255,0.6);
+/* cố định header */
+position:fixed;
+top:0;
+left:0;
+right:0;
+z-index: 1;
+}
+#header:hover{
+    background-color: rgba(255,255,255,1);  
+}
+#header.active{
+    background-color: rgba(255,255,255,1);  
+}
+.logo{
+    flex:1;   
+}
+.menu{
+    flex:3 ;/* cách phần từ kế bên 3 phần */
+    display:flex;
+    
+}
+.menu li{
+   padding:0 20px; 
+
+
+}
+.menu li a:hover{
+    color:coral;
+}
+.menu li a{
+    font-size:16px;
+    font-weight:bold; /* in đậm chữ */
+    padding-right :20px;
+ }
+ .menu li:hover .sub-menu{
+     visibility: visible;  /* khi hover vao menu se hien sub-menu */
+    top:45px;
+    }
+    
+ .sub-menu{
+     position:absolute;
+     width:180px;
+     border: 1px solid #ccc;
+     padding: 10px 0 10px 0;
+     visibility: hidden; /* an sub-menu di */
+     background-color: cadetblue;
+     top:60px;
+     transition: 0.2s;
+     z-index: 90; /*menu nổi lên trên */
+ } 
+ .sub-menu li a{
+    display: block;
+    line-height: 35px;
+
+ }
+ .sub-menu li a:hover{
+     color: #ccc;
+     
+ }
+.others{
+    flex:1;
+    display:flex;
+}
+.others li {
+    padding: 0 12px;
+   
+}
+
+.others li:first-child{
+    position:relative; /* cả ô input dc cố định */
+}
+.others li:first-child input{ /* chọn thành phần đầu tiên trong tp cha chứa nó */
+    width:100%;
+   border:none;
+   border-bottom: 1px solid #333;
+   height:25px;
+   /* không có viền */
+   background:transparent;
+   outline:none;
+
+}
+
+.others li:first-child i {
+    position:absolute;
+    right:12px;
+    padding-top:5px;
+}
+
+.logo img{
+    height:70px;
+    width:230px;
+   left: 1%;
+   top:2px;
+   position:absolute;
+   
+}
+li {
+    list-style:none ; /* bỏ dấu chấm trước câu */
+}
+a{
+    text-decoration: none; /* bỏ gạch đích */
+    
+}
+/*   nav */
+#nav{
+    padding-bottom:30px;
+    border-bottom:2px solid #333;  /* chuyển động theo từng hình */
+}
+.nav-contain {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+    transition:0.3s;
+    
+  }
+  
+  .nav-contain img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }  /* lấy trên mạng */
+
+.sub-nav{
+    position:absolute;
+    height:30px;
+    width:100%;
+    display:flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center; /* đưa dữ liệu ra chính giữa */
+}
+.navi{
+    height:16px;
+    width:18px;
+    background-color: burlywood;
+    border-radius: 50%;
+    margin-right:12px;
+    cursor: pointer;
+}
+.navi.active{
+    background-color: #333;
+
+}
+
+
+  /* sidebar */
+.row{
+    display:flex;
+    flex-wrap:wrap;
+    padding-left:20px;
+}
+#sidebar{
+    padding:80px 0 0;
+    background-color: lightsalmon;
+
+}
+.side{
+  margin-bottom:30px;
+  
+}
+.side p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0 12px ;
+    font-size: 12px;  
+}
+.side-left{
+    width:20%;
+    padding-left:20px;
+}
+
+.side-right{
+    width:80%;
+}
+.side-right-contain-item img {
+    width:250px;
+    height:250px;
+    text-align: center;
+    padding:12px;
+
+}
+.side-right-contain{
+    margin-top:30px;
+    justify-content: space-between;
+}
+.side-right-contain-item h5{
+    font-size:12px;
+    margin-top:6px;
+    margin-right: 10px;
+    text-align: center;
+}
+.side-right-contain-item p{
+    text-align: center;
+    font-size:12px;
+}
+.side-right-contain-item:hover{
+    
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+.side-right-contain-bottom-item p{
+   text-align: center;
+    margin-top:30px;
+    margin-bottom:20px;
+
+}
+.side-right-contain-bottom-item button{
+    height:25px;
+    width:25px;
+    background-color: coral;
+    border: none;
+    margin-left:10px;
+    margin-right:10px;
+}
+.side-right-contain-bottom-item button:hover{
+    background-color: #ccc;
+    cursor: pointer;
+}
+.side-left ul li {
+padding:12px 0 ;
+font-size: 12px;
+
+}
+.side-left ul li a:hover{
+    color:coral;
+}
+.side-left ul li a {
+    color:#333;
+}
+.side-left-li span {
+padding-right:10px;
+}
+.side-left-li h4{
+    padding-bottom:20px;
+    
+}
+/* -------product-------- */
+#product{
+    padding:100px;
+    background-color: lightsalmon;
+
+}
+.product-top{
+    margin-bottom:30px; 
+
+}
+.product-top p{
+    font-family: Arial, Helvetica, sans-serif;
+    margin:0 12px ;
+    font-size: 12px;  
+   
+}
+.product-contain-left{
+    width:50%;
+}
+
+.product-contain-left-imgbig{
+    width:80%;
+    padding-right:20px;
+}
+.product-contain-left-imgbig img{
+    width:100%;
+    cursor:pointer;
+    
+}
+.product-contain-left-imgsmall{
+    width:20%;
+    cursor:pointer;
+}
+.product-contain-left-imgsmall img{
+    width:100%;
+    padding-bottom:10px;
+    padding-top:10px;
+
+}
+.product-contain-right{
+    width:50%;
+    padding-left:20px;
+    
+}
+.product-contain-right-price{
+    margin:20px 0;
+    border:1px solid lightsalmon;
+    padding-left: 20px;
+    background:rgba(255,255,255,0.3);
+}
+#product-contain-right-vouchers{
+    display:flex;
+}
+.product-contain-right-vouchers {
+    font-size: 11px;
+    margin-top:220px;
+}
+.product-contain-right-vouchers-smal {
+    flex:1;
+    margin:10px 0;
+    width:30px;
+    font-size:11px;
+    
+}
+
+.product-contain-right-vouchers-small {
+    display:flex; 
+    font-size:10px;
+    
+    
+}
+.product-contain-right-vouchers-small p {
+    padding:10px 10px;
+    border:1px solid lightsalmon;
+    background:rgba(255,255,255,0.3);
+    margin:0 5px;
+
+}
+#product-contain-right-transport{
+    display:flex;
+    margin: 20px 0;
+    font-size:11px;
+}
+.product-contain-right-transport-smal p {
+    padding:2px 0;
+}
+.product-contain-right-transport-small{
+ margin-left: 40px;
+}
+.product-contain-right-transport-small p{
+    padding:5px 0;
+}
+#quantity{
+    display:flex;
+    margin: 10px 0;
+}
+.quantity-contain{
+    font-size:11px;
+    padding-right: 90px;  
+}
+#card{
+    display:flex;
+    padding: 20px 10px;
+    margin: 0 20px;
+}
+.card-button{
+    margin-right: 40px;
+}
+.card-button button{
+    padding: 5px 10px; 
+    border: 2px solid #fff;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 25px;
+}
+.card-button button:hover{
+    background: rgba(0,0,0,0.6);
+    color:#fff;
+    border: none;
+    cursor:pointer;
+    font-weight:bold;
+    
+}
+.card-buy button{
+    padding: 5px 10px;
+    border: 2px solid #fff;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 25px;
+}
+.card-buy button:hover{
+    background: rgba(0,0,0,0.6);
+    color:#fff;
+    border: none;
+    cursor:pointer; 
+    font-weight:bold;
+}
+.information{
+    padding-top:40px;
+    border-top:1px solid #fff;
+    position:relative;
+    margin-top: 50px;
+    
+}
+.infor{
+    position:absolute;
+    width:30px;
+    height:30px;
+    border:2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    top:-15px;
+    left:50%;
+    border-radius: 50%;
+    cursor:pointer;
+}
+.infor-title{
+    border-bottom: 2px solid #fff;
+    font-size:11px;
+}
+.infor-title-item{
+    padding:6px;
+    cursor: pointer;
+    margin-right:6px;
+}
+.infor-small{
+    padding-top:30px;
+
+}
+.infor-small {
+    font-size: 11px;
+
+}
+.infor-baoquan{
+   display:none; 
+}
+ .activeB{
+     display:none;
+ }   
+/* ------- card----------*/
+#card{
+    padding:100px ;
+    background-color: lightsalmon;
+}
+.card-top-wrapp{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.card-top{
+    height:2px;
+    width:70%;
+    background-color: #dddddddd;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:50px 0 100px;
+}
+.card-item{
+    width:40px;
+    height:40px;
+    border-radius: 50%;
+    border:1px solid #dddddd;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+.card-item span{
+    color:#dddddd;
+
+}
+.card-top-first{
+    border:1px solid #0DB7EA;
+}
+.card-top-first span{
+    color:#0DB7EA;
+}
+.card-contain-left{
+    flex:2;
+    padding-right: 100px;
+
+}
+.card-contain-left table{
+    width:100%;
+    text-align: center;
+}
+.card-contain-left table th{
+    padding-bottom:30px;
+    font-size:11px;
+    text-transform: uppercase;
+    color:#333;
+    border-collapse:collapse;
+    border-bottom:2px solid #dddddd;
+    
+}
+.card-contain-left table p{
+    font-size:11px;
+    color:#333;
+}
+.card-contain-left table input{
+    width:30px;
+
+}
+.card-contain-left table span{
+    display:block;
+    width:20px;
+    height:20px;
+    border:1px solid #dddddd;
+    cursor:pointer;
+    
+}
+.card-contain-left table td{
+    padding:20px 0;
+    border-bottom:2px solid #dddddd;
+}
+.card-contain-left td:first-child img{
+    width:130px;
+
+}
+.card-contain-left td:nth-child(2){
+    max-width:130px;
+}
+.card-contain-left td:nth-child(3) img{
+    max-width:30px;
+}
+.card-contain-right{
+    flex:1;
+    padding-left: 12px;
+    border-left:2px solid #dddddd;
+
+}
+.card-contain-right table{
+    width: 100%;
+}
+.card-contain-right table th{
+    padding-bottom:30px;
+    font-size: 12px;
+    color:#333;
+    border-bottom: 2px solid #dddddd;
+}
+.card-contain-right table td{
+    font-size: 12px;
+    color:#333;
+    padding:6px 0;
+}
+.card-contain-right tr:nth-child(4) td{
+    border-bottom: 2px solid #dddddd;
+
+}
+.card-contain-right tr td:last-child{
+    text-align: right;
+}
+.card-contain-right-bottom{
+    font-size: 11px;
+    margin:20px 0;
+    text-align: center;
+
+}
+.card-contain-right-bottom p{
+    font-size: 11px;
+    color:#333;
+}
+.card-button{
+    text-align: center;
+    align-items: center;
+    
+}
+.card-button button{
+    padding: 0 10px;
+    height: 40px;
+    cursor: pointer;
+    margin:  0 10px;
+    
+    
+}
+.card-dangnhap{
+    padding: 20px 10px;
+    font-size: 12px;
+}
+.card-dangnhap p {
+    padding-bottom: 15px;
+}
